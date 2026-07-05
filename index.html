@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradnja Jadran | Građevinska firma Rijeka</title>
+<meta name="description" content="Građevinska firma Gradnja Jadran iz Rijeke — stambena gradnja, renovacije i fasade, ključ u ruke. 28+ godina iskustva. Besplatna procjena!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel:#2C3E50;
+  --steel-dark:#22303F;
+  --steel-deep:#1A252F;
+  --brick:#E67E22;
+  --brick-dark:#C96A12;
+  --bg:#F5F5F5;
+  --ink:#2D2D2D;
+  --card:#FFFFFF;
+  --line:#E3E3E3;
+  --muted:#6B7683;
+  --hazard:repeating-linear-gradient(-45deg,var(--brick) 0 12px,var(--steel-deep) 12px 24px);
+  --radius:10px;
+  --shadow:0 2px 10px rgba(26,37,47,.08);
+  --shadow-lift:0 14px 30px rgba(26,37,47,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:'Roboto',system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.65;
+  font-size:16px;
+}
+h1,h2,h3,.oswald{font-family:'Oswald','Roboto Condensed',system-ui,sans-serif;line-height:1.15;color:var(--steel)}
+img,svg{max-width:100%;display:block}
+a{color:var(--brick);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--brick);outline-offset:3px;border-radius:2px}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.section-alt{background:var(--card)}
+
+/* ---------- eyebrow + section headings ---------- */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:'Oswald',sans-serif;font-weight:500;font-size:.82rem;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--brick);
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:34px;height:8px;background:var(--hazard);border-radius:2px}
+.section-title{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:600;text-transform:uppercase;letter-spacing:.02em;margin-bottom:14px}
+.section-sub{max-width:640px;color:var(--muted);margin-bottom:44px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:60;
+  background:var(--steel);
+  box-shadow:0 2px 12px rgba(0,0,0,.25);
+}
+header::after{content:"";display:block;height:5px;background:var(--hazard)}
+.nav{display:flex;align-items:center;gap:28px;height:70px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff;font-family:'Oswald',sans-serif;font-size:1.25rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+.brand:hover{text-decoration:none}
+.brand svg{width:36px;height:36px;flex:none}
+.brand small{display:block;font-family:'Roboto',sans-serif;font-size:.6rem;font-weight:400;letter-spacing:.28em;color:#9FB2C4;text-transform:uppercase}
+.nav-links{display:flex;gap:4px;margin-left:auto;list-style:none}
+.nav-links a{
+  display:block;padding:9px 15px;color:#D5DEE7;font-family:'Oswald',sans-serif;
+  font-size:.86rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;
+}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08);text-decoration:none}
+.lang{display:flex;gap:2px;background:rgba(255,255,255,.08);border-radius:8px;padding:3px}
+.lang button{
+  border:0;background:transparent;color:#AEBFCE;font:600 .74rem 'Oswald',sans-serif;
+  letter-spacing:.08em;padding:6px 10px;border-radius:6px;cursor:pointer;
+}
+.lang button[aria-pressed="true"]{background:var(--brick);color:#fff}
+.lang button:hover{color:#fff}
+.nav-cta{
+  display:inline-block;background:var(--brick);color:#fff;font:600 .82rem 'Oswald',sans-serif;
+  letter-spacing:.1em;text-transform:uppercase;padding:11px 20px;border-radius:8px;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--brick-dark);text-decoration:none}
+.burger{display:none;margin-left:auto;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:3px;background:#fff;margin:5px 0;border-radius:2px;transition:transform .25s,opacity .25s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{
+  background:linear-gradient(180deg,var(--steel-deep) 0%,var(--steel) 68%,var(--steel-dark) 100%);
+  color:#fff;padding:0;position:relative;overflow:hidden;
+}
+.hero-grid-lines{position:absolute;inset:0;opacity:.05;pointer-events:none;
+  background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);
+  background-size:56px 56px;}
+.hero-inner{position:relative;padding:84px 24px 0;text-align:left}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);font-weight:700;text-transform:uppercase;letter-spacing:.01em;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.hero-sub{margin:20px 0 32px;max-width:52ch;color:#C7D3DE;font-size:1.08rem;font-weight:300}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:48px}
+.btn{
+  display:inline-block;border:0;cursor:pointer;border-radius:8px;
+  font:600 .95rem 'Oswald',sans-serif;letter-spacing:.09em;text-transform:uppercase;
+  padding:15px 30px;transition:transform .15s,background .15s,box-shadow .15s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brick);color:#fff;box-shadow:0 6px 18px rgba(230,126,34,.35)}
+.btn-primary:hover{background:var(--brick-dark)}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 2px #fff}
+.hero-stats{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid rgba(255,255,255,.15);max-width:860px}
+.stat{padding:22px 40px 26px 0;margin-right:40px;border-right:1px solid rgba(255,255,255,.15)}
+.stat:last-child{border-right:0;margin-right:0}
+.stat b{display:block;font-family:'Oswald',sans-serif;font-size:2.3rem;font-weight:600;color:var(--brick);line-height:1}
+.stat span{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#9FB2C4}
+.hero-scene{display:block;width:100%;height:auto;margin-top:-30px}
+
+/* excavator + crane animation */
+@keyframes boom-dig{0%,100%{transform:rotate(0deg)}50%{transform:rotate(6deg)}}
+@keyframes stick-dig{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-9deg)}}
+@keyframes hook-move{0%,100%{transform:translateY(0)}50%{transform:translateY(26px)}}
+@keyframes trolley-move{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}
+.boom-group{transform-origin:1082px 300px;animation:boom-dig 7s ease-in-out infinite}
+.stick-group{transform-origin:962px 246px;animation:stick-dig 7s ease-in-out infinite}
+.hook-group{animation:hook-move 9s ease-in-out infinite}
+.trolley-group{animation:trolley-move 9s ease-in-out infinite}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.about-text p{margin-bottom:20px}
+.mission{
+  border-left:5px solid var(--brick);background:var(--card);border-radius:0 var(--radius) var(--radius) 0;
+  padding:18px 22px;font-style:italic;color:var(--steel);box-shadow:var(--shadow);
+}
+.adv-list{display:grid;gap:16px}
+.adv{
+  background:var(--card);border-radius:var(--radius);padding:20px 22px;display:flex;gap:16px;
+  box-shadow:var(--shadow);border-top:4px solid transparent;
+}
+.adv:hover{border-top-color:var(--brick)}
+.adv-num{
+  flex:none;width:44px;height:44px;border-radius:8px;background:var(--steel);color:var(--brick);
+  display:grid;place-items:center;font:600 1.15rem 'Oswald',sans-serif;
+}
+.adv h3{font-size:1.05rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.adv p{font-size:.94rem;color:var(--muted)}
+
+/* ---------- services ---------- */
+.cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc{
+  background:var(--bg);border-radius:var(--radius);padding:26px 22px;
+  border:1px solid var(--line);transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.section-alt .svc{background:var(--bg)}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:var(--brick)}
+.svc-icon{
+  width:56px;height:56px;border-radius:10px;background:var(--steel);color:var(--brick);
+  display:grid;place-items:center;margin-bottom:16px;
+}
+.svc-icon svg{width:32px;height:32px}
+.svc h3{font-size:1.02rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px}
+.svc p{font-size:.9rem;color:var(--muted)}
+
+/* ---------- projects ---------- */
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.proj{
+  background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;
+}
+.proj:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift)}
+.proj-img{aspect-ratio:16/8.5;background:var(--steel-dark)}
+.proj-img svg{width:100%;height:100%}
+.proj-body{padding:22px 24px 26px}
+.proj-tags{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.tag{
+  font:600 .68rem 'Oswald',sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  padding:4px 10px;border-radius:99px;background:rgba(230,126,34,.12);color:var(--brick-dark);
+}
+.tag-loc{background:rgba(44,62,80,.08);color:var(--steel)}
+.proj h3{font-size:1.2rem;font-weight:600;margin-bottom:8px}
+.proj p{font-size:.94rem;color:var(--muted)}
+
+/* ---------- process ---------- */
+.process{background:var(--steel);color:#fff;position:relative}
+.process .section-title{color:#fff}
+.process .section-sub{color:#AEBFCE}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:step}
+.step{position:relative;padding:30px 22px 0 0}
+.step::before{
+  counter-increment:step;content:counter(step,decimal-leading-zero);
+  font:600 1rem 'Oswald',sans-serif;color:var(--steel);background:var(--brick);
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  position:relative;z-index:1;margin-bottom:18px;color:#fff;
+}
+.step::after{
+  content:"";position:absolute;top:53px;left:56px;right:6px;height:2px;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 8px,transparent 8px 16px);
+}
+.step:last-child::after{display:none}
+.step h3{color:#fff;font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.step p{font-size:.88rem;color:#AEBFCE}
+
+/* ---------- perks ---------- */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.perk{
+  background:var(--card);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);
+  display:flex;gap:18px;align-items:flex-start;
+}
+.perk-icon{flex:none;width:52px;height:52px;border-radius:10px;background:rgba(230,126,34,.13);color:var(--brick-dark);display:grid;place-items:center}
+.perk-icon svg{width:30px;height:30px}
+.perk h3{font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
+.perk p{font-size:.9rem;color:var(--muted)}
+
+/* ---------- reviews ---------- */
+.rev{
+  background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:14px;
+}
+.stars{color:var(--brick);letter-spacing:3px;font-size:1.05rem}
+.rev blockquote{font-size:.97rem;color:var(--ink);flex:1}
+.rev footer{display:flex;align-items:center;gap:13px;border-top:1px solid var(--line);padding-top:16px}
+.avatar{
+  width:44px;height:44px;border-radius:50%;background:var(--steel);color:#fff;
+  display:grid;place-items:center;font:600 1rem 'Oswald',sans-serif;flex:none;
+}
+.rev b{display:block;font-size:.95rem;color:var(--steel)}
+.rev small{color:var(--muted);font-size:.8rem}
+
+/* ---------- CTA form ---------- */
+.cta{background:var(--steel-deep);color:#fff;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:var(--hazard)}
+.cta .section-title{color:#fff}
+.cta-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.cta-side p{color:#AEBFCE;margin-bottom:26px;max-width:44ch}
+.cta-contact{display:grid;gap:14px}
+.cta-contact a,.cta-contact div{display:flex;align-items:center;gap:12px;color:#E4EBF1;font-size:.98rem}
+.cta-contact svg{width:20px;height:20px;color:var(--brick);flex:none}
+.cta-contact a:hover{color:#fff;text-decoration:none}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:rgba(255,255,255,.05);padding:28px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.1)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field-full{grid-column:1/-1}
+.field label{font:500 .78rem 'Oswald',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#AEBFCE}
+.field input,.field select,.field textarea{
+  background:#fff;border:2px solid transparent;border-radius:7px;padding:12px 14px;
+  font:400 .95rem 'Roboto',sans-serif;color:var(--ink);width:100%;
+}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brick)}
+.form-note{grid-column:1/-1;display:none;background:rgba(46,160,67,.15);border:1px solid rgba(46,160,67,.5);color:#B7EEC3;padding:13px 16px;border-radius:8px;font-size:.92rem}
+.form-note.show{display:block}
+
+/* ---------- hours ---------- */
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.hours-card{background:var(--card);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+.hours-card h3{display:flex;align-items:center;gap:10px;font-size:1.05rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+.hours-card h3 svg{width:24px;height:24px;color:var(--brick)}
+.hours-card p{color:var(--muted);font-size:.96rem}
+.hours-time{font-family:'Oswald',sans-serif;font-size:1.3rem;color:var(--steel);margin-bottom:6px}
+
+/* ---------- footer ---------- */
+.footer{background:var(--steel-deep);color:#8FA1B3;padding:56px 0 0;font-size:.92rem}
+.footer-top{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:40px;padding-bottom:40px}
+.footer .brand{margin-bottom:14px}
+.footer-tag{max-width:34ch}
+.footer h4{font:600 .85rem 'Oswald',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.footer ul{list-style:none;display:grid;gap:8px}
+.footer ul a{color:#8FA1B3}
+.footer ul a:hover{color:#fff;text-decoration:none}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:18px 0;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.82rem}
+.footer-bottom::after{content:"";display:none}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* ---------- back to top ---------- */
+#toTop{
+  position:fixed;right:22px;bottom:22px;z-index:50;width:48px;height:48px;border-radius:10px;
+  border:0;background:var(--brick);color:#fff;cursor:pointer;box-shadow:var(--shadow-lift);
+  display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+  transform:translateY(8px);
+}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+#toTop:hover{background:var(--brick-dark)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .cards-4{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);gap:26px}
+  .step::after{display:none}
+  .about-grid,.cta-grid{grid-template-columns:1fr;gap:40px}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  section{padding:64px 0}
+  .nav-links,.nav .lang,.nav-cta{display:none}
+  .burger{display:block}
+  .mobile-menu{
+    display:none;background:var(--steel-dark);padding:12px 24px 22px;
+  }
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:12px 4px;color:#E4EBF1;font:500 1rem 'Oswald',sans-serif;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.08)}
+  .mobile-menu a:hover{color:var(--brick);text-decoration:none}
+  .mobile-menu .lang{display:inline-flex;margin-top:16px}
+  .cards-3,.proj-grid,.cards-4,.hours-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  .hero-stats{gap:0}
+  .stat{padding:18px 24px 20px 0;margin-right:24px}
+  .stat b{font-size:1.7rem}
+  .footer-top{grid-template-columns:1fr}
+}
+@media (min-width:761px){.mobile-menu{display:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ======================= ICONS SPRITE ======================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-logo" viewBox="0 0 48 48">
+      <rect x="4" y="30" width="40" height="6" rx="1" fill="#E67E22"/>
+      <path d="M8 30V16l16-10 16 10v14" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="20" y="22" width="8" height="8" fill="#E67E22"/>
+      <rect x="10" y="38" width="28" height="4" rx="1" fill="#fff" opacity=".5"/>
+    </symbol>
+    <symbol id="i-crane" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 28h20M9 28V10l14-4M9 10l14 4M23 6v8M23 14v0"/>
+      <path d="M27 6l-4 0M23 14l4 4v4"/>
+      <rect x="25" y="22" width="4" height="4"/>
+    </symbol>
+    <symbol id="i-hammer" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 11 5 19l3 3 8-8M13 5l6-2 8 8-3 3-6-1-5-5z"/>
+      <path d="M19 15l8 8-3 3-8-8"/>
+    </symbol>
+    <symbol id="i-energy" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 15 16 5l11 10M8 13v13h16V13"/>
+      <path d="M17 15l-4 6h5l-3 6" />
+    </symbol>
+    <symbol id="i-facade" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="6" width="14" height="20"/>
+      <path d="M4 12h14M4 18h14M11 6v6M8 12v6M13 18v8"/>
+      <path d="M22 10l6 6-4 4-6-6M27 21l2 5-5-2"/>
+    </symbol>
+    <symbol id="i-roller" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6" y="5" width="18" height="7" rx="2"/>
+      <path d="M24 8h4v7H15v4"/>
+      <rect x="13" y="19" width="4" height="8" rx="1"/>
+    </symbol>
+    <symbol id="i-road" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 5 4 27M22 5l6 22"/>
+      <path d="M16 6v3M16 13v4M16 21v5"/>
+    </symbol>
+    <symbol id="i-helmet" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 21a11 11 0 0 1 22 0"/>
+      <path d="M3 21h26v4H3zM13 10v-4h6v4"/>
+    </symbol>
+    <symbol id="i-docs" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 4h12l6 6v18H7z"/>
+      <path d="M19 4v6h6M11 15h10M11 20h10M11 25h6"/>
+    </symbol>
+    <symbol id="i-digger" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="22" width="16" height="6" rx="3"/>
+      <circle cx="7" cy="25" r="1"/><circle cx="15" cy="25" r="1"/>
+      <path d="M6 22v-6h8l2 6M14 16l6-8 6 3-3 6"/>
+      <path d="M23 17l4 4-5 2"/>
+    </symbol>
+    <symbol id="i-price" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 4h9v9L14 25l-9-9z"/>
+      <circle cx="21" cy="9" r="2"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="16" cy="16" r="12"/>
+      <path d="M16 9v7l5 3"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 3l11 4v9c0 7-5 11-11 13C10 27 5 23 5 16V7z"/>
+      <path d="M11 16l4 4 7-8"/>
+    </symbol>
+    <symbol id="i-key" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10" cy="12" r="6"/>
+      <path d="M14 16 27 29M22 24l4-4M18 20l3-3"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 4h7l2 7-4 3a17 17 0 0 0 7 7l3-4 7 2v7c0 1-1 2-2 2A24 24 0 0 1 4 6c0-1 1-2 2-2z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="7" width="24" height="18" rx="2"/>
+      <path d="M4 10l12 9 12-9"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 29S6 19.5 6 12a10 10 0 0 1 20 0c0 7.5-10 17-10 17z"/>
+      <circle cx="16" cy="12" r="4"/>
+    </symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ======================= HEADER ======================= -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="#pocetna">
+      <svg aria-hidden="true"><use href="#i-logo"/></svg>
+      <span data-k="naziv-kratko">Gradnja Jadran<small data-t="brand.small">građevinska firma</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks"></ul>
+    <div class="lang" role="group" aria-label="Jezik / Language / Sprache">
+      <button type="button" data-lang="hr" aria-pressed="true">HR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="de" aria-pressed="false">DE</button>
+    </div>
+    <a class="nav-cta" href="#procjena" data-t="nav.cta">Besplatna procjena</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Izbornik">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobilna navigacija"></nav>
+</header>
+
+<main id="pocetna">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" style="padding:0">
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow" style="color:var(--brick)"><span data-t="hero.eyebrow">Građevinska firma · Kvarner i Istra</span></p>
+    <h1 id="heroTitle">Gradimo čvrsto.<br><em>Gradimo za generacije.</em></h1>
+    <p class="hero-sub" data-t="hero.sub"></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#procjena" data-t="hero.cta1"></a>
+      <a class="btn btn-ghost" href="#usluge" data-t="hero.cta2"></a>
+    </div>
+    <div class="hero-stats" id="heroStats"></div>
+  </div>
+
+  <!-- gradilište: dizalica + bager + kamion -->
+  <svg class="hero-scene" viewBox="0 0 1440 430" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Ilustracija gradilišta: toranjska dizalica, zgrade u izgradnji, kamion i bager">
+    <!-- skyline back -->
+    <g fill="#24313F">
+      <rect x="40" y="205" width="120" height="185"/>
+      <rect x="185" y="150" width="95" height="240"/>
+      <rect x="300" y="235" width="140" height="155"/>
+      <rect x="465" y="180" width="80" height="210"/>
+      <rect x="570" y="255" width="130" height="135"/>
+      <rect x="1250" y="190" width="110" height="200"/>
+    </g>
+    <!-- windows -->
+    <g fill="#31455A">
+      <rect x="58" y="222" width="16" height="16"/><rect x="90" y="222" width="16" height="16"/><rect x="122" y="222" width="16" height="16"/>
+      <rect x="58" y="254" width="16" height="16"/><rect x="122" y="254" width="16" height="16"/>
+      <rect x="58" y="286" width="16" height="16"/><rect x="90" y="286" width="16" height="16"/>
+      <rect x="200" y="168" width="14" height="14"/><rect x="228" y="168" width="14" height="14"/><rect x="256" y="168" width="14" height="14"/>
+      <rect x="200" y="198" width="14" height="14"/><rect x="256" y="198" width="14" height="14"/>
+      <rect x="200" y="228" width="14" height="14"/><rect x="228" y="228" width="14" height="14"/>
+      <rect x="480" y="196" width="14" height="14"/><rect x="510" y="196" width="14" height="14"/>
+      <rect x="480" y="226" width="14" height="14"/><rect x="510" y="256" width="14" height="14"/>
+      <rect x="1266" y="206" width="15" height="15"/><rect x="1297" y="206" width="15" height="15"/><rect x="1328" y="206" width="15" height="15"/>
+      <rect x="1266" y="238" width="15" height="15"/><rect x="1328" y="238" width="15" height="15"/>
+    </g>
+    <!-- lit windows -->
+    <g fill="#E67E22" opacity=".55">
+      <rect x="90" y="254" width="16" height="16"/>
+      <rect x="228" y="198" width="14" height="14"/>
+      <rect x="510" y="226" width="14" height="14"/>
+      <rect x="1297" y="238" width="15" height="15"/>
+    </g>
+    <!-- building under construction (scaffold) -->
+    <g>
+      <rect x="740" y="215" width="180" height="175" fill="#24313F"/>
+      <g stroke="#3B5063" stroke-width="3">
+        <line x1="740" y1="255" x2="920" y2="255"/><line x1="740" y1="300" x2="920" y2="300"/><line x1="740" y1="345" x2="920" y2="345"/>
+        <line x1="785" y1="215" x2="785" y2="390"/><line x1="830" y1="215" x2="830" y2="390"/><line x1="875" y1="215" x2="875" y2="390"/>
+      </g>
+      <rect x="740" y="207" width="180" height="8" fill="#E67E22"/>
+    </g>
+    <!-- tower crane -->
+    <g stroke="#8FA1B3" stroke-width="5" fill="none">
+      <line x1="700" y1="390" x2="700" y2="80"/>
+      <line x1="688" y1="390" x2="688" y2="86"/>
+      <g stroke-width="2.5">
+        <line x1="688" y1="370" x2="700" y2="350"/><line x1="700" y1="350" x2="688" y2="330"/>
+        <line x1="688" y1="330" x2="700" y2="310"/><line x1="700" y1="310" x2="688" y2="290"/>
+        <line x1="688" y1="290" x2="700" y2="270"/><line x1="700" y1="270" x2="688" y2="250"/>
+        <line x1="688" y1="250" x2="700" y2="230"/><line x1="700" y1="230" x2="688" y2="210"/>
+        <line x1="688" y1="210" x2="700" y2="190"/><line x1="700" y1="190" x2="688" y2="170"/>
+        <line x1="688" y1="170" x2="700" y2="150"/><line x1="700" y1="150" x2="688" y2="130"/>
+        <line x1="688" y1="130" x2="700" y2="110"/><line x1="700" y1="110" x2="688" y2="90"/>
+      </g>
+      <!-- jib -->
+      <line x1="560" y1="80" x2="960" y2="80"/>
+      <line x1="560" y1="80" x2="694" y2="56"/>
+      <line x1="694" y1="56" x2="960" y2="80"/>
+      <line x1="694" y1="30" x2="694" y2="56"/>
+      <line x1="694" y1="30" x2="560" y2="80" stroke-width="2.5"/>
+      <line x1="694" y1="30" x2="960" y2="80" stroke-width="2.5"/>
+    </g>
+    <rect x="678" y="86" width="34" height="26" fill="#E67E22"/>
+    <rect x="560" y="70" width="34" height="20" fill="#4A6076"/>
+    <!-- trolley + hook (animated) -->
+    <g class="trolley-group">
+      <rect x="850" y="80" width="22" height="10" fill="#E67E22"/>
+      <g class="hook-group">
+        <line x1="861" y1="90" x2="861" y2="150" stroke="#8FA1B3" stroke-width="2"/>
+        <path d="M861 150v10a6 6 0 1 1-8 4" stroke="#E67E22" stroke-width="4" fill="none"/>
+        <rect x="838" y="164" width="46" height="14" fill="#4A6076"/>
+      </g>
+    </g>
+    <!-- dump truck -->
+    <g>
+      <path d="M330 352h86l-8-26h-70z" fill="#E67E22"/>
+      <rect x="322" y="352" width="102" height="14" fill="#324659"/>
+      <path d="M424 366h34v-22h-20l-8-14h-6z" fill="#324659"/>
+      <rect x="432" y="336" width="12" height="10" fill="#7E96AB"/>
+      <circle cx="345" cy="372" r="11" fill="#141D26"/><circle cx="345" cy="372" r="5" fill="#4A6076"/>
+      <circle cx="398" cy="372" r="11" fill="#141D26"/><circle cx="398" cy="372" r="5" fill="#4A6076"/>
+      <circle cx="441" cy="372" r="11" fill="#141D26"/><circle cx="441" cy="372" r="5" fill="#4A6076"/>
+    </g>
+    <!-- excavator (foreground, animated) -->
+    <g>
+      <!-- tracks -->
+      <rect x="1030" y="352" width="150" height="36" rx="18" fill="#141D26"/>
+      <rect x="1038" y="360" width="134" height="20" rx="10" fill="#324659"/>
+      <circle cx="1055" cy="370" r="7" fill="#141D26"/>
+      <circle cx="1105" cy="370" r="7" fill="#141D26"/>
+      <circle cx="1155" cy="370" r="7" fill="#141D26"/>
+      <!-- body -->
+      <rect x="1022" y="306" width="132" height="42" rx="8" fill="#E67E22"/>
+      <rect x="1032" y="312" width="44" height="30" rx="4" fill="#22303F"/>
+      <rect x="1037" y="317" width="24" height="20" rx="2" fill="#7E96AB"/>
+      <rect x="1148" y="316" width="26" height="26" rx="4" fill="#C96A12"/>
+      <!-- boom -->
+      <g class="boom-group">
+        <path d="M1082 306 L1000 230 L988 242 L1066 316 Z" fill="#C96A12"/>
+        <circle cx="1082" cy="308" r="10" fill="#22303F"/>
+        <g class="stick-group">
+          <path d="M994 236 L950 296 L962 304 L1002 248 Z" fill="#E67E22"/>
+          <circle cx="996" cy="242" r="7" fill="#22303F"/>
+          <path d="M958 298 l-34 6 6 26 32-14 z" fill="#22303F"/>
+          <path d="M924 304l6 26-14-4-4-16z" fill="#141D26"/>
+        </g>
+      </g>
+      <!-- rubble pile -->
+      <path d="M880 390c14-14 34-22 56-18 18-16 44-14 58 0 12-6 28-4 36 8H880z" fill="#22303F"/>
+    </g>
+    <!-- ground -->
+    <rect x="0" y="386" width="1440" height="44" fill="#141D26"/>
+    <rect x="0" y="384" width="1440" height="5" fill="#E67E22" opacity=".85"/>
+  </svg>
+</section>
+
+<!-- ======================= O NAMA ======================= -->
+<section id="onama">
+  <div class="container">
+    <p class="eyebrow"><span data-t="about.eyebrow"></span></p>
+    <h2 class="section-title" data-t="about.title"></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-t="about.intro"></p>
+        <blockquote class="mission" data-t="about.mission"></blockquote>
+      </div>
+      <div class="adv-list" id="advList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= USLUGE ======================= -->
+<section id="usluge" class="section-alt">
+  <div class="container">
+    <p class="eyebrow"><span data-t="services.eyebrow"></span></p>
+    <h2 class="section-title" data-t="services.title"></h2>
+    <p class="section-sub" data-t="services.sub"></p>
+    <div class="cards-4" id="svcGrid"></div>
+  </div>
+</section>
+
+<!-- ======================= PROJEKTI ======================= -->
+<section id="projekti">
+  <div class="container">
+    <p class="eyebrow"><span data-t="projects.eyebrow"></span></p>
+    <h2 class="section-title" data-t="projects.title"></h2>
+    <p class="section-sub" data-t="projects.sub"></p>
+    <div class="proj-grid" id="projGrid"></div>
+  </div>
+</section>
+
+<!-- ======================= PROCES ======================= -->
+<section class="process" id="proces">
+  <div class="container">
+    <p class="eyebrow"><span data-t="process.eyebrow"></span></p>
+    <h2 class="section-title" data-t="process.title"></h2>
+    <p class="section-sub" data-t="process.sub"></p>
+    <div class="steps" id="stepsGrid"></div>
+  </div>
+</section>
+
+<!-- ======================= PREDNOSTI ======================= -->
+<section id="prednosti" class="section-alt">
+  <div class="container">
+    <p class="eyebrow"><span data-t="perks.eyebrow"></span></p>
+    <h2 class="section-title" data-t="perks.title"></h2>
+    <div class="cards-3" id="perkGrid" style="margin-top:38px"></div>
+  </div>
+</section>
+
+<!-- ======================= RECENZIJE ======================= -->
+<section id="recenzije">
+  <div class="container">
+    <p class="eyebrow"><span data-t="reviews.eyebrow"></span></p>
+    <h2 class="section-title" data-t="reviews.title"></h2>
+    <div class="cards-3" id="revGrid" style="margin-top:38px"></div>
+  </div>
+</section>
+
+<!-- ======================= CTA / FORMA ======================= -->
+<section class="cta" id="procjena">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="cta-side">
+        <p class="eyebrow"><span data-t="cta.eyebrow"></span></p>
+        <h2 class="section-title" data-t="cta.title"></h2>
+        <p data-t="cta.text"></p>
+        <div class="cta-contact">
+          <a id="ctaPhone" href="#"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-k="telefon"></span></a>
+          <a id="ctaMail" href="#"><svg aria-hidden="true"><use href="#i-mail"/></svg><span data-k="email"></span></a>
+          <div><svg aria-hidden="true"><use href="#i-pin"/></svg><span><span data-k="adresa"></span>, <span data-k="grad"></span></span></div>
+        </div>
+      </div>
+      <form id="quoteForm" novalidate>
+        <div class="field">
+          <label for="f-name" data-t="form.name"></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone" data-t="form.phone"></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="f-email" data-t="form.email"></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-type" data-t="form.type"></label>
+          <select id="f-type" name="type"></select>
+        </div>
+        <div class="field field-full">
+          <label for="f-loc" data-t="form.loc"></label>
+          <input id="f-loc" name="loc" type="text">
+        </div>
+        <div class="field field-full">
+          <label for="f-desc" data-t="form.desc"></label>
+          <textarea id="f-desc" name="desc"></textarea>
+        </div>
+        <p class="form-note" id="formNote" role="status" data-t="form.ok"></p>
+        <div class="field-full">
+          <button class="btn btn-primary" type="submit" data-t="form.btn" style="width:100%"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= RADNO VRIJEME ======================= -->
+<section id="kontakt" class="section-alt">
+  <div class="container">
+    <p class="eyebrow"><span data-t="hours.eyebrow"></span></p>
+    <h2 class="section-title" data-t="hours.title"></h2>
+    <div class="hours-grid" style="margin-top:38px">
+      <div class="hours-card reveal">
+        <h3><svg aria-hidden="true"><use href="#i-clock"/></svg><span data-t="hours.hoursLabel"></span></h3>
+        <p class="hours-time" data-k="radno"></p>
+        <p data-t="hours.hoursNote"></p>
+      </div>
+      <div class="hours-card reveal">
+        <h3><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-t="hours.areaLabel"></span></h3>
+        <p class="hours-time"><span data-k="adresa"></span>, <span data-k="grad"></span></p>
+        <p data-t="hours.areaText"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#pocetna">
+          <svg aria-hidden="true"><use href="#i-logo"/></svg>
+          <span data-k="naziv-kratko2">Gradnja Jadran<small data-t="brand.small"></small></span>
+        </a>
+        <p class="footer-tag" data-t="footer.tagline"></p>
+      </div>
+      <div>
+        <h4 data-t="footer.navTitle"></h4>
+        <ul id="footNav"></ul>
+      </div>
+      <div>
+        <h4 data-t="footer.contactTitle"></h4>
+        <ul>
+          <li><span data-k="adresa"></span>, <span data-k="grad"></span></li>
+          <li><a id="footPhone" href="#" data-k="telefon"></a></li>
+          <li><a id="footMail" href="#" data-k="email"></a></li>
+          <li data-t="footer.oib"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="height:6px;background:var(--hazard)"></div>
+  <div class="container footer-bottom">
+    <span data-t="footer.copy"></span>
+    <span data-t="footer.made"></span>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Povratak na vrh">
+  <svg width="22" height="22" aria-hidden="true"><use href="#i-up"/></svg>
+</button>
+
+<script>
+/* =====================================================================
+   PODACI O KLIJENTU — zamijeni vrijednosti iz !!!PLACEHOLDERA!!! ovdje
+   ===================================================================== */
+const KLIJENT = {
+  naziv: "Gradnja Jadran d.o.o.",
+  nazivKratko: "Gradnja Jadran",
+  grad: "Rijeka",
+  adresa: "Industrijska ulica 12",
+  telefon: "+385 51 123 456",
+  email: "info@gradnja-jadran.hr",
+  radno: "Pon – Pet 07:00 – 17:00 · Sub 08:00 – 13:00",
+  godina: 1998,
+  zaposlenici: 45,
+  oib: "12345678901",
+  // izvedene brojke za statistike
+  iskustvo: 28,
+  projekti: 350,
+  klijenti: 500,
+  // opisni podaci po jeziku
+  spec: {
+    hr: "stambenu gradnju, renovacije i fasade",
+    en: "residential construction, renovations and facades",
+    de: "Wohnungsbau, Renovierungen und Fassaden"
+  },
+  podrucje: {
+    hr: "Kvarnera i Istre",
+    en: "Kvarner and Istria",
+    de: "Kvarner und Istrien"
+  }
+};
+
+/* =====================================================================
+   TROJEZIČNI SADRŽAJ (iz output/09-gradevinska-firma-sadrzaj.md)
+   ===================================================================== */
+const T = {
+hr: {
+  "brand.small": "građevinska firma",
+  nav: [["#pocetna","Početna"],["#onama","O nama"],["#usluge","Usluge"],["#projekti","Projekti"],["#kontakt","Kontakt"]],
+  "nav.cta": "Besplatna procjena",
+  "hero.eyebrow": "Građevinska firma · {podrucje}",
+  "hero.title": 'Gradimo čvrsto.<br><em>Gradimo za generacije.</em>',
+  "hero.sub": "{naziv} — pouzdan građevinski partner za {spec} na području {podrucje}.",
+  "hero.cta1": "Zatražite besplatnu procjenu",
+  "hero.cta2": "Naše usluge",
+  stats: [["iskustvo","godina iskustva"],["projekti","završenih projekata"],["klijenti","zadovoljnih klijenata"]],
+  "about.eyebrow": "O nama",
+  "about.title": "Povjerenje građeno od {godina}.",
+  "about.intro": "Firma {naziv} iz grada {grad} od {godina}. godine gradi povjerenje jednako čvrsto kao i objekte koje izvodi. Naš tim od {zaposlenici} iskusnih djelatnika specijaliziran je za {spec}, uz dosljedno poštivanje rokova, propisa i dogovorenog budžeta. Svaki projekt vodimo od prve skice do primopredaje ključeva, bez skrivenih troškova i improvizacija. Zato nam se klijenti vraćaju — i preporučuju nas dalje.",
+  "about.mission": "„Naša misija je graditi sigurne, kvalitetne i trajne objekte u kojima se generacije osjećaju kod kuće.“",
+  advantages: [
+    ["Iskustvo koje se vidi","Više od {iskustvo} godina rada na stambenim, poslovnim i javnim objektima diljem područja {podrucje}."],
+    ["Kvaliteta bez kompromisa","Ugrađujemo provjerene materijale i radimo isključivo prema važećim normama i pravilima struke."],
+    ["Riječ koja vrijedi","Dogovoreni rok i dogovorena cijena za nas su obveza, a ne okvirna procjena."]
+  ],
+  "services.eyebrow": "Usluge",
+  "services.title": "Sve što gradilište traži — na jednom mjestu",
+  "services.sub": "Od prve skice do primopredaje ključeva: kompletan raspon građevinskih usluga.",
+  services: [
+    ["i-crane","Novogradnja","Gradimo stambene i poslovne objekte po sistemu ključ u ruke, od temelja do krova. Kompletna izvedba prema projektu, u roku i u budžetu."],
+    ["i-hammer","Rekonstrukcija i adaptacija","Stare objekte pretvaramo u moderne, funkcionalne prostore. Od zamjene krovišta do potpune prenamjene prostora."],
+    ["i-energy","Energetska obnova","Smanjite račune za energiju i povećajte vrijednost nekretnine. Cjelovita obnova uz pripremu dokumentacije za sufinanciranje."],
+    ["i-facade","Fasaderski radovi","Toplinske fasade, dekorativne završne obrade i sanacija pročelja. Fasada koja štiti i izgleda besprijekorno."],
+    ["i-roller","Unutarnji radovi i uređenje","Pregradnje, gips-kartonski radovi, glazure, keramika i završna obrada. Interijer dovodimo do useljivog stanja."],
+    ["i-road","Komunalna infrastruktura","Izvodimo pristupne ceste, parkirališta, vodovodne i kanalizacijske priključke te uređenje okoliša."],
+    ["i-helmet","Nadzor nad gradnjom","Naši inženjeri brinu da se svaki dio radova izvede prema projektu, propisima i pravilima struke."],
+    ["i-docs","Konzultacije i dokumentacija","Savjetujemo vas od ideje do građevinske dozvole. Priprema kompletne dokumentacije bez stresa za investitora."]
+  ],
+  "projects.eyebrow": "Reference",
+  "projects.title": "Projekti koji govore umjesto nas",
+  "projects.sub": "Izbor iz portfelja izvedenih radova — stambeni, poslovni i javni objekti.",
+  projTypes: {stambeni:"Stambeni",poslovni:"Poslovni",javni:"Javni"},
+  projects: [
+    ["stambeni","Kastavska Draga","Stambena zgrada „Rezidencija Lovor“","Novogradnja stambene zgrade s 18 stanova i podzemnom garažom, izvedena po sistemu ključ u ruke u roku od 20 mjeseci. Objekt energetskog razreda A+.","Moderna trokatna stambena zgrada svijetle fasade s balkonima i uređenim okolišem"],
+    ["poslovni","Donji Zvirinac","Poslovni centar „Adria Park“","Izgradnja poslovnog centra od 2.400 m² s uredskim prostorima i pripadajućim parkiralištem. Kompletni radovi od zemljanih do završnih u 16 mjeseci.","Suvremeni poslovni centar sa staklenim pročeljem i prostranim parkiralištem"],
+    ["javni","Gornje Selište","Energetska obnova OŠ „Vladimir Lisac“","Cjelovita energetska obnova školske zgrade iz 1978. godine: nova toplinska fasada, stolarija i krovište. Potrošnja energije smanjena za 58 %.","Obnovljena školska zgrada sa svježom žutom fasadom i novim prozorima"],
+    ["stambeni","Mala Rudina","Obiteljska vila „Punta Mira“","Izgradnja obiteljske vile s bazenom na zahtjevnom terenu s pogledom na more. Izvedba ključ u ruke, uključujući uređenje okoliša i potporne zidove.","Mediteranska vila s infinity bazenom i kamenim potpornim zidovima uz more"]
+  ],
+  "process.eyebrow": "Proces rada",
+  "process.title": "Od upita do ključa u 5 koraka",
+  "process.sub": "Jasan i predvidljiv proces — u svakom trenutku znate što se događa na vašem gradilištu.",
+  steps: [
+    ["Besplatna konzultacija i procjena","Dolazimo na teren, slušamo vaše želje i dajemo realnu procjenu troškova i rokova. Bez obveze i bez naknade."],
+    ["Dokumentacija i dozvole","Pripremamo ili koordiniramo kompletnu dokumentaciju i vodimo postupak ishođenja dozvola umjesto vas."],
+    ["Priprema gradilišta","Osiguravamo gradilište, mehanizaciju i materijale te izrađujemo detaljan terminski plan radova."],
+    ["Izvođenje radova uz nadzor","Radove izvodi naš stalni tim majstora uz svakodnevni inženjerski nadzor i redovito izvještavanje investitora."],
+    ["Tehnički pregled i primopredaja","Organiziramo tehnički pregled, otklanjamo eventualne primjedbe i predajemo vam ključeve objekta spremnog za uporabu."]
+  ],
+  "perks.eyebrow": "Zašto mi",
+  "perks.title": "Šest razloga za miran san investitora",
+  perks: [
+    ["i-digger","Vlastita mehanizacija","Ne ovisimo o podizvođačima za strojeve: vlastiti bageri, dizalice i transportna vozila znače brže rokove i nižu cijenu."],
+    ["i-helmet","Iskusni majstori","Naš stalni tim čine provjereni majstori s dugogodišnjim stažem — bez sezonskih improvizacija na vašem gradilištu."],
+    ["i-price","Transparentna cijena","Detaljni troškovnik prije početka radova. Ono što potpišemo, to i naplatimo — bez skrivenih stavki."],
+    ["i-clock","Poštivanje rokova","Terminski plan definiramo ugovorom i držimo ga se. Vaš objekt bit će gotov kad smo rekli da će biti."],
+    ["i-shield","Jamstvo na radove","Na sve izvedene radove dajemo pisano jamstvo, a na pozive reagiramo i dugo nakon primopredaje."],
+    ["i-key","Ključ u ruke","Jedan ugovor, jedan partner, jedna odgovornost: od dozvola do useljenja sve vodimo mi."]
+  ],
+  "reviews.eyebrow": "Recenzije",
+  "reviews.title": "Što kažu naši klijenti",
+  reviews: [
+    ["Marko Vučetić","Novogradnja obiteljske kuće","Kuću su završili tjedan dana prije roka, a cijena je ostala točno kako smo dogovorili. Svaki korak su nam objasnili i uvijek bili dostupni na telefon. Toplo preporučujem."],
+    ["Ivana Brkljačić","Energetska obnova stana","Pomogli su nam oko cijele papirologije za sufinanciranje, što nam je bilo najveće olakšanje. Radovi su bili uredni, a majstori su svaki dan iza sebe ostavili čist prostor. Račun za grijanje već je osjetno manji."],
+    ["Damir Šegota","Adaptacija poslovnog prostora","Naš ured su renovirali u rekordnih šest tjedana, uz minimalne smetnje za tekuće poslovanje. Profesionalna komunikacija od prvog dana do primopredaje. Sve pohvale timu."]
+  ],
+  "cta.eyebrow": "Besplatna procjena",
+  "cta.title": "Zatražite besplatnu procjenu radova",
+  "cta.text": "Pošaljite nam osnovne podatke o projektu i javit ćemo vam se u roku od 24 sata. Procjena je besplatna i ne obvezuje vas ni na što.",
+  "form.name": "Ime i prezime","form.phone": "Telefon","form.email": "Email",
+  "form.type": "Vrsta radova","form.loc": "Lokacija objekta","form.desc": "Kratki opis projekta",
+  "form.btn": "Pošaljite upit",
+  "form.ok": "Hvala na upitu! Javit ćemo vam se u roku od 24 sata.",
+  formTypes: ["Novogradnja","Rekonstrukcija / adaptacija","Energetska obnova","Fasaderski radovi","Unutarnje uređenje","Ostalo"],
+  "hours.eyebrow": "Kontakt",
+  "hours.title": "Radno vrijeme i lokacija",
+  "hours.hoursLabel": "Radno vrijeme",
+  "hours.hoursNote": "Za hitne upite dostupni smo i izvan radnog vremena na telefon.",
+  "hours.areaLabel": "Područje djelovanja",
+  "hours.areaText": "Naše sjedište nalazi se u gradu {grad}, a radove izvodimo na cijelom području {podrucje}. Nazovite {telefon} ili nam pišite na {email}.",
+  "footer.tagline": "Čvrsti temelji za vašu budućnost.",
+  "footer.navTitle": "Navigacija",
+  "footer.contactTitle": "Kontakt",
+  "footer.oib": "OIB: {oib}",
+  "footer.copy": "© 2026 {naziv} Sva prava pridržana.",
+  "footer.made": "Građevinska firma · {grad}, Hrvatska"
+},
+en: {
+  "brand.small": "construction company",
+  nav: [["#pocetna","Home"],["#onama","About Us"],["#usluge","Services"],["#projekti","Projects"],["#kontakt","Contact"]],
+  "nav.cta": "Free estimate",
+  "hero.eyebrow": "Construction company · {podrucje}",
+  "hero.title": 'Built solid.<br><em>Built to last.</em>',
+  "hero.sub": "{naziv} — your reliable construction partner for {spec} across {podrucje}.",
+  "hero.cta1": "Request a free estimate",
+  "hero.cta2": "Our services",
+  stats: [["iskustvo","years of experience"],["projekti","completed projects"],["klijenti","satisfied clients"]],
+  "about.eyebrow": "About us",
+  "about.title": "Trust built since {godina}.",
+  "about.intro": "Since {godina}, {naziv} from {grad} has been building trust as solidly as the structures it delivers. Our team of {zaposlenici} experienced professionals specialises in {spec}, with strict respect for deadlines, regulations and the agreed budget. We manage every project from the first sketch to the handover of keys — no hidden costs, no improvisation. That is why our clients come back and recommend us.",
+  "about.mission": "“Our mission is to build safe, high-quality and lasting structures where generations feel at home.”",
+  advantages: [
+    ["Experience that shows","Over {iskustvo} years of work on residential, commercial and public buildings across {podrucje}."],
+    ["Uncompromising quality","We use proven materials and work strictly to current standards and the rules of the trade."],
+    ["A word you can build on","For us, the agreed deadline and price are a commitment, not a rough estimate."]
+  ],
+  "services.eyebrow": "Services",
+  "services.title": "Everything a building site needs — in one place",
+  "services.sub": "From the first sketch to the handover of keys: a complete range of construction services.",
+  services: [
+    ["i-crane","New construction","We build residential and commercial buildings on a turnkey basis, from foundation to roof. Complete execution according to plan, on time and on budget."],
+    ["i-hammer","Reconstruction & adaptation","We turn old buildings into modern, functional spaces. From roof replacement to complete repurposing of interiors."],
+    ["i-energy","Energy renovation","Cut your energy bills and increase your property value. Complete retrofits, including documentation for co-financing programmes."],
+    ["i-facade","Facade works","Thermal insulation facades, decorative finishes and facade restoration. A facade that protects and looks impeccable."],
+    ["i-roller","Interior works & finishing","Partition walls, drywall, screeds, tiling and finishing works. We bring interiors to move-in condition."],
+    ["i-road","Municipal infrastructure","We build access roads, parking areas, water and sewage connections, and landscaped surroundings."],
+    ["i-helmet","Construction supervision","Our engineers make sure every stage of the works is executed according to the design, regulations and rules of the trade."],
+    ["i-docs","Consulting & documentation","We guide you from the initial idea to the building permit. Complete documentation prepared without stress for the investor."]
+  ],
+  "projects.eyebrow": "References",
+  "projects.title": "Projects that speak for us",
+  "projects.sub": "A selection from our portfolio — residential, commercial and public buildings.",
+  projTypes: {stambeni:"Residential",poslovni:"Commercial",javni:"Public"},
+  projects: [
+    ["stambeni","Kastavska Draga","Residential building “Rezidencija Lovor”","New construction of a residential building with 18 apartments and an underground garage, delivered turnkey within 20 months. Energy class A+.","Modern three-storey residential building with a light facade, balconies and landscaped grounds"],
+    ["poslovni","Donji Zvirinac","Business centre “Adria Park”","Construction of a 2,400 m² business centre with office spaces and adjoining parking. Complete works from groundworks to finishes in 16 months.","Contemporary business centre with a glass facade and spacious parking area"],
+    ["javni","Gornje Selište","Energy renovation, “Vladimir Lisac” school","Complete energy retrofit of a school building from 1978: new thermal facade, joinery and roof. Energy consumption reduced by 58%.","Renovated school building with a fresh yellow facade and new windows"],
+    ["stambeni","Mala Rudina","Family villa “Punta Mira”","Construction of a family villa with a pool on demanding terrain overlooking the sea. Turnkey delivery, including landscaping and retaining walls.","Mediterranean villa with an infinity pool and stone retaining walls by the sea"]
+  ],
+  "process.eyebrow": "How we work",
+  "process.title": "From inquiry to keys in 5 steps",
+  "process.sub": "A clear, predictable process — you always know what is happening on your site.",
+  steps: [
+    ["Free consultation & estimate","We visit the site, listen to your needs and provide a realistic estimate of costs and timelines. No obligation, no charge."],
+    ["Documentation & permits","We prepare or coordinate the complete documentation and handle the permit process on your behalf."],
+    ["Site preparation","We secure the site, machinery and materials, and create a detailed work schedule."],
+    ["Execution with supervision","Works are carried out by our permanent team of craftsmen under daily engineering supervision, with regular reports to the investor."],
+    ["Technical inspection & handover","We organise the technical inspection, resolve any remarks and hand over the keys to a building ready for use."]
+  ],
+  "perks.eyebrow": "Why us",
+  "perks.title": "Six reasons investors sleep well",
+  perks: [
+    ["i-digger","Our own machinery","We do not depend on subcontractors for equipment: our own excavators, cranes and transport vehicles mean faster deadlines and lower costs."],
+    ["i-helmet","Experienced craftsmen","Our permanent team consists of proven craftsmen with years of experience — no seasonal improvisation on your construction site."],
+    ["i-price","Transparent pricing","A detailed bill of quantities before works begin. What we sign is what we charge — no hidden items."],
+    ["i-clock","Deadlines that hold","The schedule is defined by contract and we stick to it. Your building will be finished when we said it would be."],
+    ["i-shield","Warranty on works","We provide a written warranty on all executed works and respond to calls long after handover."],
+    ["i-key","Turnkey service","One contract, one partner, one responsibility: from permits to move-in, we handle everything."]
+  ],
+  "reviews.eyebrow": "Reviews",
+  "reviews.title": "What our clients say",
+  reviews: [
+    ["Marko Vučetić","New family house","They finished the house a week ahead of schedule, and the price stayed exactly as agreed. They explained every step and were always available by phone. Highly recommended."],
+    ["Ivana Brkljačić","Apartment energy renovation","They helped us with all the paperwork for co-financing, which was the biggest relief. The works were tidy and the craftsmen left a clean space behind every day. Our heating bill is already noticeably lower."],
+    ["Damir Šegota","Office space adaptation","They renovated our office in a record six weeks, with minimal disruption to our day-to-day business. Professional communication from day one to handover. Full credit to the team."]
+  ],
+  "cta.eyebrow": "Free estimate",
+  "cta.title": "Request a free project estimate",
+  "cta.text": "Send us the basic details of your project and we will get back to you within 24 hours. The estimate is free and comes with no obligation.",
+  "form.name": "Full name","form.phone": "Phone","form.email": "Email",
+  "form.type": "Type of works","form.loc": "Property location","form.desc": "Short project description",
+  "form.btn": "Send inquiry",
+  "form.ok": "Thank you! We will get back to you within 24 hours.",
+  formTypes: ["New construction","Reconstruction / adaptation","Energy renovation","Facade works","Interior finishing","Other"],
+  "hours.eyebrow": "Contact",
+  "hours.title": "Working hours & location",
+  "hours.hoursLabel": "Working hours",
+  "hours.hoursNote": "For urgent inquiries we are also available by phone outside working hours.",
+  "hours.areaLabel": "Service area",
+  "hours.areaText": "Our headquarters are in {grad}, and we carry out works throughout {podrucje}. Call {telefon} or write to us at {email}.",
+  "footer.tagline": "Solid foundations for your future.",
+  "footer.navTitle": "Navigation",
+  "footer.contactTitle": "Contact",
+  "footer.oib": "Company ID (OIB): {oib}",
+  "footer.copy": "© 2026 {naziv} All rights reserved.",
+  "footer.made": "Construction company · {grad}, Croatia"
+},
+de: {
+  "brand.small": "Bauunternehmen",
+  nav: [["#pocetna","Startseite"],["#onama","Über uns"],["#usluge","Leistungen"],["#projekti","Projekte"],["#kontakt","Kontakt"]],
+  "nav.cta": "Kostenloses Angebot",
+  "hero.eyebrow": "Bauunternehmen · {podrucje}",
+  "hero.title": 'Solide gebaut.<br><em>Für Generationen gebaut.</em>',
+  "hero.sub": "{naziv} — Ihr zuverlässiger Baupartner für {spec} in der Region {podrucje}.",
+  "hero.cta1": "Kostenloses Angebot anfordern",
+  "hero.cta2": "Unsere Leistungen",
+  stats: [["iskustvo","Jahre Erfahrung"],["projekti","abgeschlossene Projekte"],["klijenti","zufriedene Kunden"]],
+  "about.eyebrow": "Über uns",
+  "about.title": "Vertrauen, gebaut seit {godina}.",
+  "about.intro": "Seit {godina} baut {naziv} aus {grad} Vertrauen ebenso solide auf wie die Objekte, die das Unternehmen errichtet. Unser Team aus {zaposlenici} erfahrenen Fachkräften ist auf {spec} spezialisiert — mit konsequenter Einhaltung von Terminen, Vorschriften und dem vereinbarten Budget. Jedes Projekt begleiten wir von der ersten Skizze bis zur Schlüsselübergabe, ohne versteckte Kosten und ohne Improvisation. Deshalb kommen unsere Kunden wieder — und empfehlen uns weiter.",
+  "about.mission": "„Unsere Mission ist es, sichere, hochwertige und langlebige Gebäude zu errichten, in denen sich Generationen zu Hause fühlen.“",
+  advantages: [
+    ["Erfahrung, die man sieht","Über {iskustvo} Jahre Arbeit an Wohn-, Geschäfts- und öffentlichen Gebäuden in der Region {podrucje}."],
+    ["Qualität ohne Kompromisse","Wir verbauen geprüfte Materialien und arbeiten ausschließlich nach geltenden Normen und den Regeln des Handwerks."],
+    ["Ein Wort, das gilt","Vereinbarter Termin und vereinbarter Preis sind für uns eine Verpflichtung, keine grobe Schätzung."]
+  ],
+  "services.eyebrow": "Leistungen",
+  "services.title": "Alles, was eine Baustelle braucht — aus einer Hand",
+  "services.sub": "Von der ersten Skizze bis zur Schlüsselübergabe: das komplette Spektrum an Bauleistungen.",
+  services: [
+    ["i-crane","Neubau","Wir errichten Wohn- und Geschäftsgebäude schlüsselfertig, vom Fundament bis zum Dach. Komplette Ausführung nach Plan, termingerecht und im Budget."],
+    ["i-hammer","Umbau & Sanierung","Wir verwandeln alte Gebäude in moderne, funktionale Räume. Vom Dachaustausch bis zur vollständigen Umnutzung."],
+    ["i-energy","Energetische Sanierung","Senken Sie Ihre Energiekosten und steigern Sie den Wert Ihrer Immobilie. Komplette Sanierung inklusive Unterlagen für Förderprogramme."],
+    ["i-facade","Fassadenarbeiten","Wärmedämmfassaden, dekorative Oberflächen und Fassadensanierung. Eine Fassade, die schützt und makellos aussieht."],
+    ["i-roller","Innenausbau","Trennwände, Trockenbau, Estrich, Fliesen und Endausbau. Wir bringen Innenräume in bezugsfertigen Zustand."],
+    ["i-road","Kommunale Infrastruktur","Wir bauen Zufahrtsstraßen, Parkplätze, Wasser- und Abwasseranschlüsse sowie Außenanlagen."],
+    ["i-helmet","Bauaufsicht","Unsere Ingenieure sorgen dafür, dass jede Bauphase nach Plan, Vorschriften und den Regeln des Handwerks ausgeführt wird."],
+    ["i-docs","Beratung & Dokumentation","Wir begleiten Sie von der Idee bis zur Baugenehmigung. Komplette Unterlagen — stressfrei für den Bauherrn."]
+  ],
+  "projects.eyebrow": "Referenzen",
+  "projects.title": "Projekte, die für uns sprechen",
+  "projects.sub": "Eine Auswahl aus unserem Portfolio — Wohn-, Gewerbe- und öffentliche Bauten.",
+  projTypes: {stambeni:"Wohnbau",poslovni:"Gewerbebau",javni:"Öffentlich"},
+  projects: [
+    ["stambeni","Kastavska Draga","Wohngebäude „Rezidencija Lovor“","Neubau eines Wohngebäudes mit 18 Wohnungen und Tiefgarage, schlüsselfertig übergeben innerhalb von 20 Monaten. Energieklasse A+.","Modernes dreistöckiges Wohngebäude mit heller Fassade, Balkonen und gepflegter Außenanlage"],
+    ["poslovni","Donji Zvirinac","Geschäftszentrum „Adria Park“","Bau eines Geschäftszentrums mit 2.400 m² Bürofläche und zugehörigem Parkplatz. Komplette Ausführung von den Erdarbeiten bis zum Endausbau in 16 Monaten.","Modernes Geschäftszentrum mit Glasfassade und großzügigem Parkplatz"],
+    ["javni","Gornje Selište","Energetische Sanierung, Grundschule „Vladimir Lisac“","Komplette energetische Sanierung eines Schulgebäudes aus dem Jahr 1978: neue Wärmedämmfassade, Fenster und Dach. Energieverbrauch um 58 % gesenkt.","Saniertes Schulgebäude mit frischer gelber Fassade und neuen Fenstern"],
+    ["stambeni","Mala Rudina","Familienvilla „Punta Mira“","Bau einer Familienvilla mit Pool auf anspruchsvollem Gelände mit Meerblick. Schlüsselfertige Ausführung inklusive Außenanlagen und Stützmauern.","Mediterrane Villa mit Infinity-Pool und Natursteinmauern am Meer"]
+  ],
+  "process.eyebrow": "Arbeitsprozess",
+  "process.title": "Von der Anfrage zum Schlüssel in 5 Schritten",
+  "process.sub": "Ein klarer, planbarer Prozess — Sie wissen jederzeit, was auf Ihrer Baustelle passiert.",
+  steps: [
+    ["Kostenlose Beratung & Schätzung","Wir kommen vor Ort, hören uns Ihre Wünsche an und erstellen eine realistische Kosten- und Terminschätzung. Unverbindlich und kostenlos."],
+    ["Dokumentation & Genehmigungen","Wir erstellen oder koordinieren die komplette Dokumentation und übernehmen das Genehmigungsverfahren für Sie."],
+    ["Baustellenvorbereitung","Wir sichern Baustelle, Maschinen und Material und erstellen einen detaillierten Bauzeitenplan."],
+    ["Ausführung unter Bauaufsicht","Die Arbeiten führt unser festes Handwerkerteam unter täglicher Ingenieuraufsicht aus, mit regelmäßigen Berichten an den Bauherrn."],
+    ["Technische Abnahme & Übergabe","Wir organisieren die technische Abnahme, beheben eventuelle Mängel und übergeben Ihnen die Schlüssel eines bezugsfertigen Objekts."]
+  ],
+  "perks.eyebrow": "Warum wir",
+  "perks.title": "Sechs Gründe für ruhigen Schlaf",
+  perks: [
+    ["i-digger","Eigener Maschinenpark","Wir sind bei Maschinen nicht auf Subunternehmer angewiesen: eigene Bagger, Kräne und Transportfahrzeuge bedeuten kürzere Bauzeiten und niedrigere Kosten."],
+    ["i-helmet","Erfahrene Handwerker","Unser festes Team besteht aus bewährten Handwerkern mit langjähriger Erfahrung — keine saisonale Improvisation auf Ihrer Baustelle."],
+    ["i-price","Transparente Preise","Detailliertes Leistungsverzeichnis vor Baubeginn. Was wir unterschreiben, das berechnen wir — ohne versteckte Posten."],
+    ["i-clock","Termintreue","Der Bauzeitenplan wird vertraglich festgelegt und eingehalten. Ihr Objekt ist fertig, wann wir es zugesagt haben."],
+    ["i-shield","Garantie auf Arbeiten","Auf alle ausgeführten Arbeiten geben wir eine schriftliche Garantie und sind auch lange nach der Übergabe erreichbar."],
+    ["i-key","Schlüsselfertig","Ein Vertrag, ein Partner, eine Verantwortung: von der Genehmigung bis zum Einzug übernehmen wir alles."]
+  ],
+  "reviews.eyebrow": "Bewertungen",
+  "reviews.title": "Was unsere Kunden sagen",
+  reviews: [
+    ["Marko Vučetić","Neubau eines Einfamilienhauses","Das Haus wurde eine Woche vor dem Termin fertiggestellt, und der Preis blieb genau wie vereinbart. Jeder Schritt wurde uns erklärt, und sie waren telefonisch immer erreichbar. Sehr zu empfehlen."],
+    ["Ivana Brkljačić","Energetische Sanierung einer Wohnung","Sie haben uns bei allen Unterlagen für die Förderung geholfen — das war die größte Erleichterung. Die Arbeiten waren sauber, und die Handwerker haben jeden Tag einen aufgeräumten Raum hinterlassen. Die Heizkosten sind bereits spürbar niedriger."],
+    ["Damir Šegota","Umbau von Geschäftsräumen","Unser Büro wurde in rekordverdächtigen sechs Wochen renoviert, mit minimalen Störungen für den laufenden Betrieb. Professionelle Kommunikation vom ersten Tag bis zur Übergabe. Großes Lob an das Team."]
+  ],
+  "cta.eyebrow": "Kostenloses Angebot",
+  "cta.title": "Kostenlose Kostenschätzung anfordern",
+  "cta.text": "Senden Sie uns die Eckdaten Ihres Projekts, und wir melden uns innerhalb von 24 Stunden bei Ihnen. Die Schätzung ist kostenlos und völlig unverbindlich.",
+  "form.name": "Vor- und Nachname","form.phone": "Telefon","form.email": "E-Mail",
+  "form.type": "Art der Arbeiten","form.loc": "Standort des Objekts","form.desc": "Kurze Projektbeschreibung",
+  "form.btn": "Anfrage senden",
+  "form.ok": "Vielen Dank! Wir melden uns innerhalb von 24 Stunden.",
+  formTypes: ["Neubau","Umbau / Sanierung","Energetische Sanierung","Fassadenarbeiten","Innenausbau","Sonstiges"],
+  "hours.eyebrow": "Kontakt",
+  "hours.title": "Arbeitszeiten & Standort",
+  "hours.hoursLabel": "Arbeitszeiten",
+  "hours.hoursNote": "Für dringende Anfragen sind wir auch außerhalb der Arbeitszeiten telefonisch erreichbar.",
+  "hours.areaLabel": "Einsatzgebiet",
+  "hours.areaText": "Unser Firmensitz befindet sich in {grad}. Wir führen Arbeiten in der gesamten Region {podrucje} aus. Rufen Sie {telefon} an oder schreiben Sie an {email}.",
+  "footer.tagline": "Solide Fundamente für Ihre Zukunft.",
+  "footer.navTitle": "Navigation",
+  "footer.contactTitle": "Kontakt",
+  "footer.oib": "Steuernummer (OIB): {oib}",
+  "footer.copy": "© 2026 {naziv} Alle Rechte vorbehalten.",
+  "footer.made": "Bauunternehmen · {grad}, Kroatien"
+}
+};
+
+/* ====================== SVG "fotografije" projekata ====================== */
+const PROJ_ART = [
+  /* stambena zgrada */
+  `<svg viewBox="0 0 480 255" role="img"><rect width="480" height="255" fill="#2C3E50"/>
+   <rect x="0" y="215" width="480" height="40" fill="#22303F"/>
+   <rect x="120" y="55" width="240" height="160" fill="#ECEFF2"/>
+   <rect x="120" y="47" width="240" height="8" fill="#E67E22"/>
+   ${[0,1,2].map(r=>[0,1,2,3].map(c=>`<rect x="${142+c*56}" y="${72+r*48}" width="32" height="28" fill="#2C3E50"/><rect x="${138+c*56}" y="${102+r*48}" width="40" height="4" fill="#E67E22"/>`).join("")).flat().join("")}
+   <rect x="40" y="140" width="60" height="75" fill="#24313F"/><rect x="390" y="120" width="55" height="95" fill="#24313F"/>
+   <circle cx="420" cy="45" r="18" fill="#E67E22" opacity=".4"/></svg>`,
+  /* poslovni centar */
+  `<svg viewBox="0 0 480 255" role="img"><rect width="480" height="255" fill="#2C3E50"/>
+   <rect x="0" y="215" width="480" height="40" fill="#22303F"/>
+   <rect x="90" y="40" width="200" height="175" fill="#4A6076"/>
+   ${[0,1,2,3,4].map(r=>[0,1,2].map(c=>`<rect x="${100+c*64}" y="${50+r*33}" width="54" height="25" fill="#7E96AB" opacity="${r%2?".9":".6"}"/>`).join("")).flat().join("")}
+   <rect x="300" y="110" width="120" height="105" fill="#ECEFF2"/>
+   <rect x="300" y="102" width="120" height="8" fill="#E67E22"/>
+   <rect x="318" y="130" width="30" height="22" fill="#2C3E50"/><rect x="368" y="130" width="30" height="22" fill="#2C3E50"/>
+   <rect x="340" y="175" width="36" height="40" fill="#22303F"/>
+   <rect x="60" y="200" width="360" height="6" fill="#E67E22" opacity=".6"/></svg>`,
+  /* škola */
+  `<svg viewBox="0 0 480 255" role="img"><rect width="480" height="255" fill="#2C3E50"/>
+   <rect x="0" y="215" width="480" height="40" fill="#22303F"/>
+   <rect x="80" y="95" width="320" height="120" fill="#F2CB6C"/>
+   <path d="M70 95h340l-20-30H90z" fill="#C96A12"/>
+   ${[0,1,2,3,4,5].map(c=>`<rect x="${100+c*48}" y="115" width="30" height="26" fill="#2C3E50"/>`).join("")}
+   <rect x="216" y="160" width="48" height="55" fill="#22303F"/>
+   <rect x="228" y="30" width="5" height="35" fill="#8FA1B3"/><path d="M233 30h30l-8 8 8 8h-30z" fill="#E67E22"/>
+   <circle cx="60" cy="50" r="16" fill="#E67E22" opacity=".4"/></svg>`,
+  /* vila s bazenom */
+  `<svg viewBox="0 0 480 255" role="img"><rect width="480" height="255" fill="#2C3E50"/>
+   <rect x="0" y="190" width="480" height="30" fill="#3E6E8E"/>
+   <rect x="0" y="220" width="480" height="35" fill="#22303F"/>
+   <rect x="110" y="90" width="200" height="100" fill="#ECEFF2"/>
+   <path d="M100 90h220l-24-34H124z" fill="#C96A12"/>
+   <rect x="135" y="112" width="42" height="32" fill="#2C3E50"/><rect x="243" y="112" width="42" height="32" fill="#2C3E50"/>
+   <rect x="192" y="130" width="36" height="60" fill="#22303F"/>
+   <rect x="330" y="165" width="110" height="25" rx="6" fill="#5FA8C9"/>
+   <rect x="330" y="160" width="110" height="6" rx="3" fill="#ECEFF2"/>
+   <path d="M40 190c14-24 14-44 8-62 22 10 30 34 24 62z" fill="#39566B"/></svg>`
+];
+
+/* ============================ RENDER ============================ */
+const $  = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+let LANG = localStorage.getItem("lang") || "hr";
+
+function fill(str, lang){
+  return str
+    .replaceAll("{naziv}", KLIJENT.naziv)
+    .replaceAll("{grad}", KLIJENT.grad)
+    .replaceAll("{adresa}", KLIJENT.adresa)
+    .replaceAll("{telefon}", KLIJENT.telefon)
+    .replaceAll("{email}", KLIJENT.email)
+    .replaceAll("{godina}", KLIJENT.godina)
+    .replaceAll("{zaposlenici}", KLIJENT.zaposlenici)
+    .replaceAll("{oib}", KLIJENT.oib)
+    .replaceAll("{iskustvo}", KLIJENT.iskustvo)
+    .replaceAll("{spec}", KLIJENT.spec[lang])
+    .replaceAll("{podrucje}", KLIJENT.podrucje[lang]);
+}
+
+function render(lang){
+  LANG = lang;
+  localStorage.setItem("lang", lang);
+  document.documentElement.lang = lang;
+  const t = T[lang];
+
+  $$(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+
+  // plain data-t nodes
+  $$("[data-t]").forEach(el => {
+    const v = t[el.dataset.t];
+    if (typeof v === "string") el.innerHTML = fill(v, lang);
+  });
+  $("#heroTitle").innerHTML = fill(t["hero.title"], lang);
+
+  // client data nodes
+  $$("[data-k]").forEach(el => {
+    const k = el.dataset.k;
+    if (k === "naziv-kratko" || k === "naziv-kratko2")
+      el.innerHTML = `${KLIJENT.nazivKratko}<small>${t["brand.small"]}</small>`;
+    else el.textContent = KLIJENT[k];
+  });
+  $("#ctaPhone").href = "tel:" + KLIJENT.telefon.replace(/\s/g,"");
+  $("#footPhone").href = "tel:" + KLIJENT.telefon.replace(/\s/g,"");
+  $("#ctaMail").href = "mailto:" + KLIJENT.email;
+  $("#footMail").href = "mailto:" + KLIJENT.email;
+
+  // nav
+  const navHTML = t.nav.map(([h,l]) => `<li><a href="${h}">${l}</a></li>`).join("");
+  $("#navLinks").innerHTML = navHTML;
+  $("#footNav").innerHTML = navHTML;
+  $("#mobileMenu").innerHTML =
+    t.nav.map(([h,l]) => `<a href="${h}">${l}</a>`).join("") +
+    `<a href="#procjena" style="color:var(--brick)">${t["nav.cta"]}</a>` +
+    `<div class="lang" role="group" aria-label="Jezik">${["hr","en","de"].map(c =>
+      `<button type="button" data-lang="${c}" aria-pressed="${c===lang}">${c.toUpperCase()}</button>`).join("")}</div>`;
+  bindLang($("#mobileMenu"));
+  $("#mobileMenu").querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+  // hero stats
+  $("#heroStats").innerHTML = t.stats.map(([key,label]) =>
+    `<div class="stat"><b data-count="${KLIJENT[key]}">0</b><span>${label}</span></div>`).join("");
+  animateCounters();
+
+  // about advantages
+  $("#advList").innerHTML = t.advantages.map(([h,p],i) =>
+    `<div class="adv reveal"><div class="adv-num" aria-hidden="true">${i+1}</div><div><h3>${h}</h3><p>${fill(p,lang)}</p></div></div>`).join("");
+
+  // services
+  $("#svcGrid").innerHTML = t.services.map(([icon,h,p]) =>
+    `<article class="svc reveal"><div class="svc-icon" aria-hidden="true"><svg><use href="#${icon}"/></svg></div><h3>${h}</h3><p>${p}</p></article>`).join("");
+
+  // projects
+  $("#projGrid").innerHTML = t.projects.map(([type,loc,name,desc,alt],i) =>
+    `<article class="proj reveal">
+      <div class="proj-img" role="img" aria-label="${alt}">${PROJ_ART[i]}</div>
+      <div class="proj-body">
+        <div class="proj-tags"><span class="tag">${t.projTypes[type]}</span><span class="tag tag-loc">${loc}</span></div>
+        <h3>${name}</h3><p>${desc}</p>
+      </div>
+    </article>`).join("");
+
+  // steps
+  $("#stepsGrid").innerHTML = t.steps.map(([h,p]) =>
+    `<div class="step reveal"><h3>${h}</h3><p>${p}</p></div>`).join("");
+
+  // perks
+  $("#perkGrid").innerHTML = t.perks.map(([icon,h,p]) =>
+    `<article class="perk reveal"><div class="perk-icon" aria-hidden="true"><svg><use href="#${icon}"/></svg></div><div><h3>${h}</h3><p>${p}</p></div></article>`).join("");
+
+  // reviews
+  $("#revGrid").innerHTML = t.reviews.map(([name,type,text]) => {
+    const init = name.split(" ").map(w => w[0]).join("");
+    return `<article class="rev reveal">
+      <div class="stars" aria-label="5/5">★★★★★</div>
+      <blockquote>„${text}“</blockquote>
+      <footer><span class="avatar" aria-hidden="true">${init}</span><span><b>${name}</b><small>${type}</small></span></footer>
+    </article>`;
+  }).join("");
+
+  // form select
+  $("#f-type").innerHTML = t.formTypes.map(o => `<option>${o}</option>`).join("");
+
+  observeReveals();
+}
+
+/* ============================ interakcije ============================ */
+function bindLang(scope){
+  scope.querySelectorAll("[data-lang]").forEach(b =>
+    b.addEventListener("click", () => render(b.dataset.lang)));
+}
+bindLang(document.querySelector("header .lang"));
+
+const burger = $("#burger");
+function closeMenu(){
+  burger.setAttribute("aria-expanded","false");
+  $("#mobileMenu").classList.remove("open");
+}
+burger.addEventListener("click", () => {
+  const open = burger.getAttribute("aria-expanded") === "true";
+  burger.setAttribute("aria-expanded", String(!open));
+  $("#mobileMenu").classList.toggle("open", !open);
+});
+
+$("#quoteForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target;
+  if (!f.reportValidity()) return;
+  $("#formNote").classList.add("show");
+  f.reset();
+  setTimeout(() => $("#formNote").classList.remove("show"), 6000);
+});
+
+const toTop = $("#toTop");
+addEventListener("scroll", () => toTop.classList.toggle("show", scrollY > 600), {passive:true});
+toTop.addEventListener("click", () => scrollTo({top:0, behavior:"smooth"}));
+
+/* brojači u heroju */
+const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function animateCounters(){
+  $$("#heroStats [data-count]").forEach(el => {
+    const target = +el.dataset.count;
+    if (reduceMotion){ el.textContent = target + "+"; return; }
+    const t0 = performance.now(), dur = 1400;
+    (function tick(now){
+      const p = Math.min((now - t0) / dur, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + "+";
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+}
+
+/* scroll reveal */
+let io;
+function observeReveals(){
+  if (io) io.disconnect();
+  if (reduceMotion){ $$(".reveal").forEach(el => el.classList.add("in")); return; }
+  io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  $$(".reveal").forEach(el => io.observe(el));
+}
+
+render(LANG);
+</script>
+</body>
+</html>
